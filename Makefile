@@ -10,10 +10,7 @@ download_vectors_colab:
 
 download_data:
 	# Bosque
-	wget -P data/ https://github.com/UniversalDependencies/UD_Portuguese-Bosque/raw/master/pt_bosque-ud-train.conllu
-	wget -P data/ https://github.com/UniversalDependencies/UD_Portuguese-Bosque/raw/master/pt_bosque-ud-dev.conllu
-	wget -P data/ https://github.com/UniversalDependencies/UD_Portuguese-Bosque/raw/master/pt_bosque-ud-test.conllu
-	cat data/pt_bosque-ud-dev.conllu >> data/pt_bosque-ud-train.conllu
+	git clone https://github.com/UniversalDependencies/UD_Portuguese-Bosque data/udbase/UD_Portuguese-Bosque
+	cat data/udbase/UD_Portuguese-Bosque/pt_bosque-ud-dev.conllu >> data/udbase/UD_Portuguese-Bosque/pt_bosque-ud-train.conllu
 	# Porttinari-base
-	wget -P data/ https://github.com/huberemanuel/UD_Portuguese-Porttinari/raw/master/pt_porttinari-ud-train.conllu
-	wget -P data/ https://github.com/huberemanuel/UD_Portuguese-Porttinari/raw/master/pt_porttinari-ud-test.conllu
+	git clone https://github.com/huberemanuel/UD_Portuguese-Porttinari.git data/udbase/UD_Portuguese-Porttinari
